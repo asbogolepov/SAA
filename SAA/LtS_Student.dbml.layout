@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.25" name="LtS_Student">
+  <DataContextMoniker Name="/LtS_StudentDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a669cbed-9e57-40d3-b5d9-7d405a317130" absoluteBounds="8.375, 1.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LtS_StudentDataContext/dim_datetime" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2df68592-a7e9-4337-9ddf-87488226de71" absoluteBounds="8.39, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f04cb0a5-8678-4995-b190-8e9f726389b4" absoluteBounds="5.5, 1.875, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/LtS_StudentDataContext/Fact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c91d79a-af69-4d53-8d6b-75826c6d6f9e" absoluteBounds="5.5150000000000006, 2.335, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14f82ded-4fc8-4daf-b530-f0bb7518ec89" absoluteBounds="2.125, 8.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/LtS_StudentDataContext/dim_Faculty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b6e146a-f97c-44f8-b926-84b7ac8cd0d1" absoluteBounds="2.14, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b16b1f19-8c95-4eb4-b888-756de81a30af" absoluteBounds="2.25, 5.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LtS_StudentDataContext/dim_Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12568f28-1463-40c7-ac98-0a7ec7bb28fb" absoluteBounds="2.265, 6.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33e3f043-4464-4856-87f3-19b0d4cec62c" absoluteBounds="2.25, 1.875, 2, 2.1554996744791675">
+      <DataClassMoniker Name="/LtS_StudentDataContext/dim_Student" />
+      <nestedChildShapes>
+        <elementListCompartment Id="500c4f2b-dba2-4c27-8a22-319d685619da" absoluteBounds="2.2649999999999997, 2.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 2.56814697265625); (7.5 : 2.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LtS_StudentDataContext/dim_datetime/dim_datetime_Fact" />
+      <nodes>
+        <classShapeMoniker Id="a669cbed-9e57-40d3-b5d9-7d405a317130" />
+        <classShapeMoniker Id="f04cb0a5-8678-4995-b190-8e9f726389b4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.1875 : 8.75); (3.1875 : 7.20359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LtS_StudentDataContext/dim_Faculty/dim_Faculty_dim_Group" />
+      <nodes>
+        <classShapeMoniker Id="14f82ded-4fc8-4daf-b530-f0bb7518ec89" />
+        <classShapeMoniker Id="b16b1f19-8c95-4eb4-b888-756de81a30af" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.25 : 2.95274983723958); (5.5 : 2.95274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LtS_StudentDataContext/dim_Student/dim_Student_Fact" />
+      <nodes>
+        <classShapeMoniker Id="33e3f043-4464-4856-87f3-19b0d4cec62c" />
+        <classShapeMoniker Id="f04cb0a5-8678-4995-b190-8e9f726389b4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.25 : 5.625); (3.25 : 4.03049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LtS_StudentDataContext/dim_Group/dim_Group_dim_Student" />
+      <nodes>
+        <classShapeMoniker Id="b16b1f19-8c95-4eb4-b888-756de81a30af" />
+        <classShapeMoniker Id="33e3f043-4464-4856-87f3-19b0d4cec62c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SAA_Student" Class="LtS_StudentDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=SAA_Student;Integrated Security=True" SettingsObjectName="SAA.Properties.Settings" SettingsPropertyName="SAA_StudentConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.dim_datetime" Member="dim_datetime">
+    <Type Name="dim_datetime">
+      <Column Name="id_date" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="month" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="dim_datetime_Fact" Member="Fact" ThisKey="id_date" OtherKey="id_date" Type="Fact" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Fact" Member="Fact">
+    <Type Name="Fact">
+      <Column Name="fact_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_student" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_date" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prof_uspevaemost" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="neprof_uspevaemost" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="conference_count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="olimp_prizer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="olimp_winner" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prof_sites" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ocenka_prepodovatela" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="otziv_zavkaf" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="otziv_practica" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="publications" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="patents" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sertificates" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="projects" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="opit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="dim_datetime_Fact" Member="dim_datetime" ThisKey="id_date" OtherKey="id_date" Type="dim_datetime" IsForeignKey="true" />
+      <Association Name="dim_Student_Fact" Member="dim_Student" ThisKey="id_student" OtherKey="id_student" Type="dim_Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dim_Faculty" Member="dim_Faculty">
+    <Type Name="dim_Faculty">
+      <Column Name="ID_Faculty" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_Faculty" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Association Name="dim_Faculty_dim_Group" Member="dim_Group" ThisKey="ID_Faculty" OtherKey="ID_Faculty" Type="dim_Group" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dim_Group" Member="dim_Group">
+    <Type Name="dim_Group">
+      <Column Name="ID_Group" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Faculty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Abbreviation" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Name_Group" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Association Name="dim_Group_dim_Student" Member="dim_Student" ThisKey="ID_Group" OtherKey="ID_Group" Type="dim_Student" />
+      <Association Name="dim_Faculty_dim_Group" Member="dim_Faculty" ThisKey="ID_Faculty" OtherKey="ID_Faculty" Type="dim_Faculty" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dim_Student" Member="dim_Student">
+    <Type Name="dim_Student">
+      <Column Name="id_student" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Group" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fio_student" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="residense_place" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Phone_student" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="email_student" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="zachetka" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="dim_Student_Fact" Member="Fact" ThisKey="id_student" OtherKey="id_student" Type="Fact" />
+      <Association Name="dim_Group_dim_Student" Member="dim_Group" ThisKey="ID_Group" OtherKey="ID_Group" Type="dim_Group" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
