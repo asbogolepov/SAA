@@ -1,0 +1,26 @@
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\bin\Debug\SAA.exe.config
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\bin\Debug\SAA.exe
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\bin\Debug\SAA.pdb
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.csprojResolveAssemblyReference.cache
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.Authorization.resources
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.Properties.Resources.resources
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.csproj.GenerateResource.Cache
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.exe
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.pdb
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.csproj.CoreCompileInputs.cache
+D:\Дипломка Боголепов\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.Desktop.resources
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\bin\Debug\SAA.exe.config
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\bin\Debug\SAA.exe
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\bin\Debug\SAA.pdb
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.csprojResolveAssemblyReference.cache
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.Authorization.resources
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.Desktop.resources
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.Properties.Resources.resources
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.csproj.GenerateResource.Cache
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.csproj.CoreCompileInputs.cache
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.exe
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.pdb
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.AddFaculty.resources
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.AddStudent.resources
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.AddGroup.resources
+C:\Users\Антон\Desktop\Диплом\Students_Analysis_Services\SAA\SAA\obj\Debug\SAA.AddFact.resources
